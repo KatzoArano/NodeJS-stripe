@@ -12,6 +12,8 @@ app.engine('.hbs', expbhs({
     extname : '.hbs'
 }));
 
+app.set('view engine', '.hbs');
+
 // Middelware
 app.use(express.urlencoded({extended : false}));
 app.use(express.json());

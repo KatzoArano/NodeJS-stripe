@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-4">
         <div class="card">
-            <img src="https://cdn1.papadrinks.com/2824-medium_default/bumbu-the-original.jpg" alt="Software video edition" class="card-img-top">
+            <img src="https://cdn1.papadrinks.com/2824-medium_default/bumbu-the-original.jpg" alt="Rhum" class="card-img-top">
             <div class="card-body">
                 <p>30 euros</p>
                 <p>
@@ -9,13 +9,13 @@
                 </p>
             </div>
             <div class="card-footer">
-                <form action="your-server-side-code" method="POST">
+                <form action="/checkout" method="POST">
                 <script
                     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key="pk_test_gyDjmVf8M9r142FEjMipYXw400OCrq6Mtj"
                     data-amount="3000"
                     data-name="Bumbu The Original"
-                    data-description="Software Vidéo Edition"
+                    data-description="Rhum boteila"
                     data-image="/pirate.jpeg"
                     data-locale="auto"
                     data-currency="eur">
@@ -23,8 +23,8 @@
                     <script>
                         document.getElementsByClassName('stripe-button-el')[0].style.display = 'none'
                     </script>
-                  <button class="btn btn-dark btn-block">
-                    Buy<i class="fas fa-shopping-cart"></i>
+                  <button type="submit" class="btn btn-dark btn-block">
+                     Erosi <i class="fas fa-shopping-cart"></i>
                 </button>
                 </form>
               

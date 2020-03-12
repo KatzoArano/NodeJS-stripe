@@ -1,30 +1,32 @@
 const express = require('express');
-const expbhs = require('express-handlebars');
+const exphbs = require('express-handlebars');
 const path = require('path');
 
+// Initializations
 const app = express();
 
 // Settings
+app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'views'));
-app.engine('.hbs', expbhs({
-    defaultLayout : 'main',
+app.engine('.hbs', exphbs({
+    defaultLayout: 'main',
     layoutsDir: path.join(app.get('views'), 'layouts'),
-    extname : '.hbs'
+    partialsDir: path.join(app.get('views'), 'partials'),
+    extname: '.hbs'
 }));
-
 app.set('view engine', '.hbs');
 
-// Middelware
-app.use(express.urlencoded({extended : false}));
+// Middlewares
+app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 // Routes
-app.use(require('./routes/index'))
+app.use(require('./routes'));
 
-// Static
-app.use(express.static(path.join(__dirname, 'public')))
+// Static files
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Start server
-app.listen(3000, () => {
-    console.log('Server listen', 3000);
+// Start Server
+app.listen(app.get('port'), () => {
+    console.log('Server on port', app.get('port'));
 });

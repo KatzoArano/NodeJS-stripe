@@ -1,17 +1,33 @@
 <div class="row">
     <div class="col-md-4">
         <div class="card">
-            <img src="software.jpeg" alt="Software video edition" class="card-img-top">
+            <img src="https://cdn1.papadrinks.com/2824-medium_default/bumbu-the-original.jpg" alt="Software video edition" class="card-img-top">
             <div class="card-body">
                 <p>30 euros</p>
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, itaque vero distinctio non ab eligendi?
+                Le rhum Bumbu est distillé en utilisant deux alambics continus puis reposé dans des fûts de bourbon du Kentucky. La levure utilisée lors de la fermentation est un secret de la distillerie qui remonte aussi loin que 1840. Possédant des arômes complexes de caramel mou, la vanille de Madagascar et de chêne grillé. En bouche il se distingue par quelque chose de moyennement corsé avec de subtiles notes de cannelle, de noix grillées et de piment, menant à un final lisse et légèrement sucré. La bouteille se distingue avec une croix en métal apposé sur le flacon et un bouchon en liège rappelant les anciennes bouteilles de rhums
                 </p>
             </div>
             <div class="card-footer">
-                <button class="btn btn-dark btn-block">
+                <form action="your-server-side-code" method="POST">
+                <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_gyDjmVf8M9r142FEjMipYXw400OCrq6Mtj"
+                    data-amount="3000"
+                    data-name="Bumbu The Original"
+                    data-description="Software Vidéo Edition"
+                    data-image="/pirate.jpeg"
+                    data-locale="auto"
+                    data-currency="eur">
+                </script>
+                    <script>
+                        document.getElementsByClassName('stripe-button-el')[0].style.display = 'none'
+                    </script>
+                  <button class="btn btn-dark btn-block">
                     Buy<i class="fas fa-shopping-cart"></i>
                 </button>
+                </form>
+              
             </div>
         </div>
     </div>
